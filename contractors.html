@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Для подрядчиков — БригАдрес</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">БА</span>
+      <span class="logo-text">БригАдрес</span>
+    </a>
+    <nav class="main-nav">
+      <a href="about.html">О нас</a>
+      <a href="projects.html">Проекты</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contractors.html" class="active">Подрядчикам</a>
+    </nav>
+    <div class="header-contacts">
+      <a href="tel:+7XXXXXXXXXX" class="phone">+7 (XXX) XXX‑XX‑XX</a>
+      <div class="messengers">
+        <span class="messenger-icon">WA</span>
+        <span class="messenger-icon">TG</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Приводим клиентов, которые ценят вашу работу</h1>
+      <p class="section-lead">
+        Подключайтесь к нашей закрытой базе специалистов и получайте стабильный поток заказов без рисков и абонентской платы.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p>
+        Вы — профессионал, который выкладывается на объекте на 100%. Мы — БригАдрес, сервис, который ценит это.
+        Мы берем на себя всю работу по привлечению клиентов, предварительным согласованиям и защите ваших интересов,
+        чтобы вы могли делать то, что умеете лучше всего — качественно работать.
+      </p>
+
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <h3>Стабильный поток заказов</h3>
+          <p>
+            Простой между заказами, сезонность, нестабильный доход — типичные проблемы подрядчиков.
+            Мы постоянно рекламируем ваши услуги и обеспечиваем поток готовых к работе клиентов.
+            Вы планируете загрузку бригады на недели вперед.
+          </p>
+        </article>
+        <article class="benefit-card">
+          <h3>Никаких рисков и предоплат</h3>
+          <p>
+            Платформы берут абонентскую плату, а заказов нет. Деньги уходят, а результата — ноль.
+            Вы не платите нам ни копейки, пока не получите деньги от клиента.
+            Наша комиссия — только с оплаченных сделок. Мы зарабатываем, только когда зарабатываете вы.
+          </p>
+        </article>
+        <article class="benefit-card">
+          <h3>Работа по четкому ТЗ и прозрачным расчетам</h3>
+          <p>
+            Клиент постоянно меняет задачи в процессе, а потом отказывается платить за изменения?
+            Мы помогаем составить детальное техническое задание. Вы даете цену, и она не меняется.
+            Все расчеты — по актам, без неожиданных и спорных ситуаций.
+          </p>
+        </article>
+      </div>
+
+      <p>
+        Оставьте заявку, и мы свяжемся с вами для обсуждения условий подключения.
+        Мы не берем абонентской платы — наша комиссия только с успешно завершенных сделок.
+      </p>
+
+      <div class="section-cta">
+        <a href="#contractor-form" class="btn btn-primary">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="contractor-form">
+    <div class="container form-container">
+      <div class="form-info">
+        <h2>Заявка на подключение к базе БригАдрес</h2>
+        <p>
+          Расскажите о своей бригаде, опыте и видах работ. Мы свяжемся с вами и обсудим сотрудничество.
+        </p>
+      </div>
+      <form class="lead-form contractor-form">
+        <div class="form-row">
+          <label>Имя / название бригады
+            <input type="text" name="contractor_name" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Телефон
+            <input type="tel" name="phone" placeholder="+7 (___) ___‑__‑__" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Основные виды работ
+            <textarea name="works" rows="3" placeholder="Например: отделка, электрика, сантехника..."></textarea>
+          </label>
+        </div>
+        <div class="form-row form-row-inline">
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span>Я даю согласие с <a href="privacy.html" target="_blank">политикой конфиденциальности</a> и <a href="data-consent.html" target="_blank">обработкой персональных данных</a>.</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        <p class="form-success" hidden>Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3>Контакты</h3>
+      <p><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX‑XX‑XX</a></p>
+      <p><a href="mailto:brigadres@mail.ru">brigadres@mail.ru</a></p>
+      <p>Остались вопросы? Напишите нам — ответим за 5 минут!</p>
+      <div class="footer-messengers">
+        <a href="#" class="messenger-icon">Telegram</a>
+        <a href="#" class="messenger-icon">VK</a>
+      </div>
+      <p class="footer-schedule">
+        Для юр. лиц: ср–пт: 9:00–18:00<br/>
+        Для клиентов: ежедневно: 8:00–22:00
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Навигация</h3>
+      <ul>
+        <li><a href="calculator.html">Подбор подрядчиков</a></li>
+        <li><a href="commission.html">Наша комиссия</a></li>
+      </ul>
+      <h4>Компания</h4>
+      <ul>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+      </ul>
+      <h4>Партнерам</h4>
+      <ul>
+        <li><a href="contractors.html" class="active">Для подрядчиков</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Юридическая информация</h3>
+      <ul>
+        <li><a href="offer.html">Публичная оферта</a></li>
+        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="data-consent.html">Согласие на обработку данных</a></li>
+      </ul>
+      <p class="footer-legal">
+        Реквизиты: ИП Иванов А.А., ИНН 1234567890.
+      </p>
+      <p class="footer-warning">
+        Все права защищены.
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
