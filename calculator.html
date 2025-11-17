@@ -14,16 +14,17 @@
       <span class="logo-text">БригАдрес</span>
     </a>
     <nav class="main-nav">
+      <a href="index.html">Главная</a>
       <a href="about.html">О нас</a>
       <a href="projects.html">Проекты</a>
       <a href="reviews.html">Отзывы</a>
       <a href="contractors.html">Подрядчикам</a>
     </nav>
     <div class="header-contacts">
-      <a href="tel:+7XXXXXXXXXX" class="phone">+7 (XXX) XXX‑XX‑XX</a>
+      <a href="tel:89334191597" class="phone">8 933 419-15-97</a>
       <div class="messengers">
-        <span class="messenger-icon">WA</span>
-        <span class="messenger-icon">TG</span>
+        <a href="https://t.me/brigadres" class="messenger-icon" target="_blank" rel="noopener noreferrer">TG</a>
+        <a href="https://vk.com/brigadres" class="messenger-icon" target="_blank" rel="noopener noreferrer">VK</a>
       </div>
     </div>
   </div>
@@ -32,104 +33,89 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <h1>Рассчитайте стоимость вашего проекта за 2 минуты</h1>
-      <p class="section-lead">
-        Расскажите о вашей задаче, а мы подберем надежного специалиста и гарантируем, что он выполнит ее точно.
-      </p>
-      <p>
-        Это не калькулятор в рублях, а инструмент сбора технического задания. На выходе вы получаете структурированное ТЗ
-        и ориентир по рыночной цене, который можно отправить подрядчикам.
-      </p>
+      <h1>Умный калькулятор — расскажите о задаче за 2 минуты</h1>
     </div>
   </section>
-
-  <section class="section light">
+  <section class="section">
     <div class="container form-container">
+      <div class="form-info">
+        <p class="section-lead">
+          Это не калькулятор «в рублях». Это инструмент, который помогает собрать понятное ТЗ и подобрать
+          под него подрядчиков. Вы описываете задачу, мы — проверяем исполнителей и даём ориентиры по бюджету и срокам.
+        </p>
+        <p>
+          Чем точнее вы заполните форму, тем точнее будет подбор. Если не знаете, что писать — просто объясните
+          по‑человечески, а мы переведём это на язык стройки.
+        </p>
+      </div>
       <form class="smart-calculator" id="smart-calculator">
         <div class="form-row">
-          <label>Объект
+          <label>Тип объекта
             <select name="object" required>
-              <option value="" disabled selected>Выберите тип объекта</option>
-              <option value="Жилой дом">Жилой дом</option>
               <option value="Квартира">Квартира</option>
-              <option value="Коммерция">Коммерция</option>
-              <option value="Баня">Баня</option>
+              <option value="Дом">Дом</option>
+              <option value="Офис">Офис</option>
+              <option value="Коммерческий объект">Коммерческий объект</option>
             </select>
           </label>
         </div>
-
+        <div class="form-row">
+          <label>Примерная площадь, м²
+            <input type="number" name="area" min="1" max="1000" />
+          </label>
+        </div>
         <div class="form-row">
           <label>Тип работ
             <select name="work_type" required>
-              <option value="" disabled selected>Выберите тип работ</option>
-              <option value="Ремонт">Ремонт</option>
-              <option value="Монтаж">Монтаж</option>
-              <option value="Строительство">Строительство</option>
-              <option value="Нужна консультация">Нужна консультация</option>
+              <option value="Косметический ремонт">Косметический ремонт</option>
+              <option value="Капитальный ремонт">Капитальный ремонт</option>
+              <option value="Ремонт под ключ с дизайн‑проектом">Ремонт под ключ с дизайн‑проектом</option>
             </select>
           </label>
         </div>
-
         <div class="form-row">
-          <label>Площадь (м²)
-            <input type="number" name="area" min="1" placeholder="Например: 45" required />
-          </label>
-        </div>
-
-        <div class="form-row">
-          <label>Сроки начала работ
-            <select name="timeframe" required>
-              <option value="" disabled selected>Выберите срок</option>
-              <option value="На этой неделе">На этой неделе</option>
-              <option value="В этом месяце">В этом месяце</option>
-              <option value="В течение 2–3 месяцев">В течение 2–3 месяцев</option>
+          <label>Когда планируете стартовать?
+            <select name="timeframe">
+              <option value="В ближайший месяц">В ближайший месяц</option>
+              <option value="Через 2–3 месяца">Через 2–3 месяца</option>
+              <option value="Пока только прицениваюсь">Пока только прицениваюсь</option>
             </select>
           </label>
         </div>
-
         <div class="form-row">
-          <label>Телефон
-            <input type="tel" name="phone" placeholder="+7 (___) ___‑__‑__" required />
-          </label>
-        </div>
-
-        <div class="form-row">
-          <label>Как с вами связаться?
-            <select name="contact_method" required>
-              <option value="Позвонить">Позвонить</option>
-              <option value="Telegram">Написать в Telegram</option>
-              <option value="WhatsApp">Написать в WhatsApp</option>
+          <label>Как с вами удобнее связаться?
+            <select name="contact_method">
+              <option value="Телефон">Телефон</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Telegram">Telegram</option>
             </select>
           </label>
         </div>
-
         <div class="form-row">
-          <label>Дополнительные пожелания (необязательно)
-            <textarea name="extra" rows="3" placeholder="Например: важен минимальный шум, нужен дизайн-проект, уже есть часть материалов..."></textarea>
+          <label>Дополнительные комментарии
+            <textarea name="extra" rows="4" placeholder="Например: важно уложиться к определённой дате, есть/нет дизайн‑проекта и т.п."></textarea>
           </label>
         </div>
-
         <div class="form-row form-row-inline">
           <label class="checkbox">
             <input type="checkbox" required />
-            <span>Я даю согласие с <a href="privacy.html" target="_blank">политикой конфиденциальности</a> и <a href="data-consent.html" target="_blank">обработкой персональных данных</a>.</span>
+            <span>Я согласен с <a href="legal.html" target="_blank">политикой обработки персональных данных</a>.</span>
           </label>
         </div>
-
-        <button type="submit" class="btn btn-primary">Получить предварительное ТЗ</button>
+        <button type="submit" class="btn btn-primary">Сформировать ТЗ и подобрать подрядчиков</button>
       </form>
+    </div>
+  </section>
 
-      <div class="calc-result" id="calc-result" hidden>
-        <h2>Ваше предварительное ТЗ</h2>
-        <div class="calc-result-content">
-          <!-- Здесь JavaScript подставит итоговое описание -->
-        </div>
-        <div class="calc-result-note">
-          <p>
-            По опыту, рыночная цена похожих проектов будет сформирована после уточнения деталей и выезда подрядчика на объект.
-            Вы получите предложения от проверенных специалистов и сможете сравнить их между собой.
-          </p>
-        </div>
+  <section class="section" id="calc-result" hidden>
+    <div class="container">
+      <div class="calc-result">
+        <h2>Что мы поняли о вашем проекте</h2>
+        <div class="calc-result-content"></div>
+        <p class="calc-result-note">
+          Это черновой набросок. После короткого созвона мы уточним детали, скорректируем ТЗ и подберём
+          подходящих подрядчиков из нашей базы.
+        </p>
       </div>
     </div>
   </section>
@@ -139,12 +125,12 @@
   <div class="container footer-grid">
     <div class="footer-col">
       <h3>Контакты</h3>
-      <p><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX‑XX‑XX</a></p>
+      <p><a href="tel:89334191597">8 933 419-15-97</a></p>
       <p><a href="mailto:brigadres@mail.ru">brigadres@mail.ru</a></p>
       <p>Остались вопросы? Напишите нам — ответим за 5 минут!</p>
       <div class="footer-messengers">
-        <a href="#" class="messenger-icon">Telegram</a>
-        <a href="#" class="messenger-icon">VK</a>
+        <a href="https://t.me/brigadres" class="messenger-icon" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://vk.com/brigadres" class="messenger-icon" target="_blank" rel="noopener noreferrer">VK</a>
       </div>
       <p class="footer-schedule">
         Для юр. лиц: ср–пт: 9:00–18:00<br/>
@@ -154,7 +140,7 @@
     <div class="footer-col">
       <h3>Навигация</h3>
       <ul>
-        <li><a href="calculator.html" class="active">Подбор подрядчиков</a></li>
+        <li><a href="calculator.html">Подбор подрядчиков</a></li>
         <li><a href="commission.html">Наша комиссия</a></li>
       </ul>
       <h4>Компания</h4>
@@ -163,7 +149,7 @@
         <li><a href="reviews.html">Отзывы</a></li>
         <li><a href="projects.html">Проекты</a></li>
       </ul>
-      <h4>Партнерам</h4>
+      <h4>Партнёрам</h4>
       <ul>
         <li><a href="contractors.html">Для подрядчиков</a></li>
       </ul>
@@ -171,9 +157,7 @@
     <div class="footer-col">
       <h3>Юридическая информация</h3>
       <ul>
-        <li><a href="offer.html">Публичная оферта</a></li>
-        <li><a href="privacy.html">Политика конфиденциальности</a></li>
-        <li><a href="data-consent.html">Согласие на обработку данных</a></li>
+        <li><a href="legal.html">Публичная оферта, политика конфиденциальности и согласие</a></li>
       </ul>
       <p class="footer-legal">
         Реквизиты: ИП Иванов А.А., ИНН 1234567890.
