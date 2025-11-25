@@ -1,0 +1,14 @@
+.brigadres-logo-replaced img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brigadres-logo-replaced img { height: 34px; }
+}
+
+.logo-badge, .brand-badge {
+  background: transparent !important;
+  border: none !important;
+}

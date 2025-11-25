@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" role="img" aria-label="БригАдрес">
+  <title>БригАдрес</title>
+  <rect width="100%" height="100%" fill="none"/>
+  <g fill="#f25a25">
+    <rect x="20" y="60" width="60" height="60" rx="6"/>
+    <rect x="110" y="40" width="70" height="80" rx="6"/>
+    <rect x="200" y="20" width="90" height="100" rx="6"/>
+    <rect x="32" y="78" width="14" height="14" fill="#000"/>
+    <rect x="54" y="78" width="14" height="14" fill="#000"/>
+    <rect x="32" y="100" width="14" height="14" fill="#000"/>
+    <rect x="128" y="58" width="14" height="14" fill="#000"/>
+    <rect x="152" y="58" width="14" height="14" fill="#000"/>
+    <rect x="128" y="84" width="14" height="14" fill="#000"/>
+    <rect x="214" y="42" width="14" height="14" fill="#000"/>
+    <rect x="240" y="42" width="14" height="14" fill="#000"/>
+    <rect x="214" y="72" width="14" height="14" fill="#000"/>
+  </g>
+  <polyline points="10,70 60,30 110,80 170,40 230,90 320,10" fill="none" stroke="#35b24a" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"/>
+  <g transform="translate(0,140)">
+    <text x="10" y="18" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700" font-size="28" fill="#35b24a">БригАдрес</text>
+  </g>
+</svg>
