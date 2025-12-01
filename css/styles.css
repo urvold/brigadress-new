@@ -72,6 +72,12 @@ img {
   align-items: center;
   gap: 10px;
 }
+.logo-image {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
 
 .logo-mark {
   background: var(--accent-orange);
@@ -727,6 +733,19 @@ img {
   font-size: 13px;
   color: var(--text-muted);
 }
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
+
 
 .footer-grid {
   display: grid;
