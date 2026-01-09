@@ -139,7 +139,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setStep(1);
 
-  // Dummy submit handler for form
+  
+  // Document slider on странице с документами
+  const docSlider = document.querySelector('.doc-slider');
+  if (docSlider) {
+    const track = docSlider.querySelector('.doc-slider-track');
+    const slides = docSlider.querySelectorAll('.doc-slide');
+    const dots = docSlider.querySelectorAll('.doc-slider-dot');
+    const prev = docSlider.querySelector('.doc-slider-prev');
+    const next = docSlider.querySelector('.doc-slider-next');
+    let current = 0;
+
+    const goTo = (index) => {
+      const total = slides.length;
+      if (!track || !total) return;
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === current);
+      });
+    };
+
+    if (prev) prev.addEventListener('click', () => goTo(current - 1));
+    if (next) next.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => goTo(idx));
+    });
+
+    goTo(0);
+  }
+
+// Dummy submit handler for form
   document.querySelectorAll('.lead-form').forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
