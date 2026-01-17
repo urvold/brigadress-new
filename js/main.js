@@ -150,11 +150,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const next = docSlider.querySelector('.doc-slider-next');
     let current = 0;
 
+    const total = slides.length;
+    if (!track || !total) return;
+
+    // Make slide widths deterministic so соседние слайды не выглядывали по краям
+    const step = 100 / total;
+    track.style.width = `${total * 100}%`;
+    slides.forEach((slide) => {
+      slide.style.flex = `0 0 ${step}%`;
+      slide.style.maxWidth = `${step}%`;
+    });
+
     const goTo = (index) => {
-      const total = slides.length;
-      if (!track || !total) return;
       current = (index + total) % total;
-      track.style.transform = `translate3d(-${current * 100}%, 0, 0)`;
+      track.style.transform = `translate3d(-${current * step}%, 0, 0)`;
       dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === current);
       });
