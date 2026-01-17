@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const total = slides.length;
       if (!track || !total) return;
       current = (index + total) % total;
-      track.style.transform = `translateX(-${current * 100}%)`;
+      track.style.transform = `translate3d(-${current * 100}%, 0, 0)`;
       dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === current);
       });
