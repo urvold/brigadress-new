@@ -876,6 +876,13 @@ img {
   will-change: transform;
 }
 
+.doc-slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-xl);
+}
+
+
 .doc-slide {
   flex: 0 0 100%;
   max-width: 100%;
