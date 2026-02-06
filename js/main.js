@@ -178,14 +178,56 @@ document.addEventListener('DOMContentLoaded', () => {
     goTo(0);
   }
 
-// Dummy submit handler for form
+// Lead form submit handler (GitHub Pages-safe)
+  const sendLeadForm = async (form) => {
+    const success = form.querySelector('.form-success');
+    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+
+    const data = new FormData(form);
+    // Build plain text body
+    const lines = [];
+    for (const [key, value] of data.entries()) {
+      if (typeof value === 'string') {
+        lines.push(`${key}: ${value}`);
+      }
+    }
+    const bodyText = lines.join('\n');
+
+    // If action is a https endpoint (Formspree / Apps Script), try fetch
+    const action = form.getAttribute('action') || '';
+    if (action.startsWith('https://')) {
+      try {
+        if (submitBtn) submitBtn.disabled = true;
+        const res = await fetch(action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+        if (res.ok) {
+          form.reset();
+          if (success) success.hidden = false;
+          return;
+        }
+      } catch (err) {
+        // fall through to mailto
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    }
+
+    // Fallback: open email client via mailto (works without backend)
+    const to = 'brigadres@mail.ru';
+    const subject = encodeURIComponent('Заявка с сайта БригАдрес');
+    const body = encodeURIComponent(bodyText);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    if (success) success.hidden = false;
+  };
+
   document.querySelectorAll('.lead-form').forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const success = form.querySelector('.form-success');
-      if (success) {
-        success.hidden = false;
-      }
+      sendLeadForm(form);
     });
   });
+
 });
